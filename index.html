@@ -1,29 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="./css/linkstyle.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BISWARUP</title>
-   
-</head>
-<body>
-    <div class="total">
-        <div>
-            <h4>Link Dictionary</h4>
-            <li>movi links</li>
-            
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+    type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+    type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+  </head>
+  <body>
+    <div style="width: 640px; height: 480px" id="mapContainer"></div>
+    <script>
+      // Initialize the platform object:
+      var platform = new H.service.Platform({
+        'apikey': 'PG7ABVerh6z7BLhb8-_ZXdSxsZc3TmbrQ0FrCDjg92k'
+      });
 
-        </div>
-        <img src="profile.jpg" alt="photo">
-    </div>
+      // Obtain the default map types from the platform object
+      var maptypes = platform.createDefaultLayers();
+
+      var svgMarkup = '<svg width="24" height="24" ' +
+    'xmlns="http://www.w3.org/2000/svg">' +
+    '<rect stroke="white" fill="#1b468d" x="1" y="1" width="22" ' +
+    'height="22" /><text x="12" y="18" font-size="12pt" ' +
+    'font-family="Arial" font-weight="bold" text-anchor="middle" ' +
+    'fill="white">H</text></svg>';
     
-</body>
+
+    // Create an icon, an object holding the latitude and longitude, and a marker:
+    var icon = new H.map.Icon(svgMarkup),
+        coords = { 
+              lat: 21.7766255, 
+              lng: 87.7342039 
+            },
+        marker = new H.map.Marker(coords, {icon: icon});
+        
+
+      // Instantiate (and display) a map object:
+      var map = new H.Map(
+        document.getElementById('mapContainer'),
+        maptypes.vector.normal.map,
+        {
+          zoom: 15.5,
+          center: { 
+              lat: 21.776, 
+              lng: 87.734 
+            }
+
+        });
+
+        map.addObject(marker);
+        map.setCenter(coords);
+
+        // Enable the event system on the map instance:
+        var mapEvents = new H.mapevents.MapEvents(map);
+
+        // Instantiate the default behavior, providing the mapEvents object:
+        new H.mapevents.Behavior(mapEvents);
+    </script>
+  </body>
 </html>
-<style>
-    .total{
-        background-color: rgb(73, 191, 195);
-        height: 500px;
-        overflow-y: scroll;
-    }
-</style>
