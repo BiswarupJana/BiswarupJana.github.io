@@ -4,12 +4,13 @@
 .total{
     width: auto;
     background-color: rgb(187, 187, 221);
-    overflow-x: scroll;
-
+    overflow-y: scroll;
+    margin: 5%;
+    height: 500px;;
 }
 
 
-  
+
 .head{
    margin-left: 45%;
    font-size:50px ;
