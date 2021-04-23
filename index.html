@@ -13,12 +13,15 @@ and open the template in the editor.
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="login.php">
-  <link rel="stylesheet" href="animation.js">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/page_background.css">
+  <link rel="stylesheet" href="php/login.php">
+  <link rel="stylesheet" href="js/animation.js">
+
 </head>
 
 <body>
+  
   <!-- Navbar -->
   <div class="nav-bar">
     <div class="logo">
@@ -125,7 +128,7 @@ and open the template in the editor.
   <div class="modals">
     <!-- Cart Modal -->
     <div id="cart-modal" class="modal">
-      <form class="modal-content animate" action="/action_page.php" method="post">
+      <form class="modal-content animate" action="/login.php" method="post">
         <div class="imgcontainer">
           <span onclick="document.getElementById('cart-modal').style.display='none'" class="close"
             title="Close Modal">&times;</span>
@@ -152,7 +155,7 @@ and open the template in the editor.
 
     <!-- Reset Password Modal -->
     <div id="reset-password-modal" class="modal">
-      <form class="modal-content animate" action="/action_page.php" method="post">
+      <form class="modal-content animate" action="/php/login.php" method="post">
         <div class="imgcontainer">
           <span onclick="document.getElementById('reset-password-modal').style.display='none'" class="close"
             title="Close Modal">&times;</span>
@@ -217,7 +220,7 @@ and open the template in the editor.
 
     <!-- Login Modal -->
     <div id="login-modal" class="modal">
-      <form class="modal-content animate" action="/action_page.php" method="post">
+      <form class="modal-content animate" action="/php/login.php" method="post">
         <div class="imgcontainer">
           <span onclick="document.getElementById('login-modal').style.display='none'" class="close"
             title="Close Modal">&times;</span>
