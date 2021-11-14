@@ -1,0 +1,23 @@
+.nav-bar {
+    background-color: rgb(247, 222, 1);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 15px;
+}
+
+
+.ok { 
+   margin-left: 5%;  
+    flex: 50%;
+    
+}
+.nav-links {
+    flex: 50%;
+
+}
+
+.home {
+    padding-right: 5%;
+}
