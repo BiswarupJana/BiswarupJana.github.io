@@ -1,23 +1,92 @@
-.nav-bar {
-    background-color: rgb(247, 222, 1);
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    border-radius: 15px;
+html {
+	scroll-behavior: smooth;
 }
 
-
-.ok { 
-   margin-left: 5%;  
-    flex: 50%;
-    
+:root {
+	--main-color: #e02f6b;
+	--blue: #0000ff;
+	--blue-dark: #18293c;
+	--orange: #ffa500;
+	--green-yellow: #cddc39;
+	--pink-light: #efa2b4;
+	--cyan-light: #aef1ee;
+	--white: #ffffff;
+	--white-alpha-40: rgba(255, 255, 255, 0.4);
+	--white-alpha-25: rgba(255, 255, 255, 0.25);
+	--backdrop-filter-blur: blur(5px);
 }
-.nav-links {
-    flex: 50%;
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background: rgb(255, 255, 255);
+	scroll-behavior: smooth;
 }
 
-.home {
-    padding-right: 5%;
+a {
+	text-decoration: none;
+}
+
+/* HOMEPAGE */
+/* Navigation Bar  */
+.nav {
+    background: #ABA7A7;
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 30px 30px 0 30px;
+	transition: 0.3s;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.nav .logo {
+	transition: 0.3s;
+}
+
+.logo img {
+	width: 70%;
+}
+
+.right-nav {
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.nav .nav-links {
+	display: flex;
+}
+.nav .nav-links .sub-links-nav {
+	transition: 0.04s;
+	list-style: none;
+}
+
+.nav .nav-links .sub-links-nav:hover {
+	transition: 0.1s;
+	transform: scale(1.2);
+}
+
+.nav .nav-links .sub-links-nav a {
+	margin: 0 15px;
+	text-decoration: none;
+	font-family: "Nunito Sans", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	color: #000000;
+	font-weight: 600;
+}
+
+.fa-bars {
+	color: #0085ff;
+	font-size: 23px;
+}
+
+#hidden {
+	display: none;
 }
