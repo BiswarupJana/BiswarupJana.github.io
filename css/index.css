@@ -148,3 +148,9 @@ body {
       transform:translateX(25%);
     }
   }
+
+  .hi-avatar {
+    height: 200px;
+    width: 200px;
+    float: left;
+  }
