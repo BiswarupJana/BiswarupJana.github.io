@@ -149,8 +149,9 @@ body {
     }
   }
 
-  .hi-avatar {
-    height: 200px;
-    width: 200px;
-    float: left;
-  }
+  .a
+
+.hi-avatar {
+  background-color: rgba(0,0,0,0.0);
+  float: left;
+}
